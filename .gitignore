@@ -6,6 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -19,3 +20,25 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore pow environment settings
+.powenv
+
+# Ignore node_modules
+node_modules/
+
+# Ignore secrets
+/config/secrets.yml
+config/initializers/secret_token.rb
+config/master.key
+
+# Ignore miscellaneous
+/public/system
+/coverage/
+/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+.rvmrc
+.env
+
