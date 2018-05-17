@@ -29,8 +29,11 @@ node_modules/
 
 # Ignore secrets
 /config/secrets.yml
-config/initializers/secret_token.rb
-config/master.key
+/config/initializers/secret_token.rb
+/config/master.key
+
+# Ignore environment variables
+/config/initializers/env_vars.rb
 
 # Ignore miscellaneous
 /public/system

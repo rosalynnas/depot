@@ -1,18 +1,10 @@
 # Load the Rails application.
 require_relative 'application'
 
+env_vars = File.join(Rails.root, 'config', 'initializers', 'env_vars.rb')
+load(env_vars) if File.exists?(env_vars)
+
 # Initialize the Rails application.
 Rails.application.initialize!
 
-Depot::Application.configure do
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'example.com',
-    user_name:            ENV["GMAIL_USERNAME"],
-    password:             ENV["GMAIL_PASSWORD"],
-    authentication:       'plain',
-    enable_starttls_auto: true
-  }
-end
+
