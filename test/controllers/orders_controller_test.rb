@@ -30,7 +30,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
         pay_type: @order.pay_type } }
     end
 
-    assert_redirected_to store_index_url
+    assert_redirected_to store_index_url(locale: I18n.locale)
   end
 
   test "should show order" do

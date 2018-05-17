@@ -34,7 +34,7 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
 
     get "/orders/new"
     assert_response :success
-    assert_select 'legend', 'Please enter your details'
+    assert_select 'legend', 'Please Enter Your Details'
 
     perform_enqueued_jobs do
       post "/orders", params: {
